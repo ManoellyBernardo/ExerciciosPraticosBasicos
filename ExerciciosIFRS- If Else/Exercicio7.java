@@ -6,25 +6,28 @@ public class Exercicio7 {
 
     public static void main(String[] args) {
         
-        int num = 0, cont = 0, numMenor = 0;
+        int num1, num2, num3;
 
         Scanner scan = new Scanner(System.in);
 
-        while (cont < 3) {
-           
-            System.out.println("Digite o " + (cont + 1) + "° número: ");
-            num = scan.nextInt();
-
-            if (num < numMenor) {
-                numMenor = num;
-            }
-            
-            cont++;
-
-        }            
-
-        System.out.println("O menor número informado foi: " + numMenor);
-
+        System.out.println("Escreva aqui o primeiro número: ");
+        num1 = scan.nextInt();
+        
+        System.out.println("Escreva aqui o segundo número: ");
+        num2 = scan.nextInt();
+        
+        System.out.println("Escreva aqui o terceiro número: ");
+        num3 = scan.nextInt();
+        
+        if (num1 < num2 && num1 < num3) {
+            System.out.println(num1 + " é o menor número.");
+        }
+        if (num2 < num1 && num2 < num3){
+            System.out.println(num2 + " é o menor número.");
+        }
+        if (num3 < num1 && num3 < num2) {
+            System.out.println(num3 + " é o menor número.");
+        }
 
         scan.close();
     }
