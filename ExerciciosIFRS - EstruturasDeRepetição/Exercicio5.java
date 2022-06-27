@@ -6,10 +6,24 @@ public class Exercicio5 {
 
     public static void main(String[] args) {
         
-        int numViagens;
+        int numViagens, cont = 0;
+        double litrosCombustivel, distancia, somaQuilometros = 0, mediaQuilomentros;
 
-        System.out.println("Quantas viagens você realizou ? ");
+        System.out.println("Quantas viagens foram realizadas ? ");
         numViagens = Integer.parseInt(System.console().readLine());
 
+        while(cont < numViagens) {
+			System.out.println("VIAGEM " + cont+1);
+			System.out.println("Quantos litros de combustivel foi consumido? ");
+			litrosCombustivel = Double.parseDouble(System.console().readLine());
+			System.out.println("Qual foi a distância total percorrida (em km) ? ");
+			distancia = Double.parseDouble(System.console().readLine());
+			
+			somaQuilometros = somaQuilometros + distancia / litrosCombustivel;
+			cont = cont + 1;
+		}
+		
+		mediaQuilomentros = somaQuilometros / numViagens;
+		System.out.println("Consumo Médio do Carro: " + mediaQuilomentros);
     }
 }
