@@ -5,11 +5,11 @@ public class Exercicio2 {
 
     public static void main(String[] args) {
         
-        for (int i = 1; i <= 100; i++) {
-            
-            String j = Integer.toString(i);
+        for (int i = 0; i <= 100; i++) {
 
-            System.out.println("O correspondente binário de " + i + " é " + Integer.parseInt(j,2));
+            String binario = Integer.toString(i, 2); 
+			
+            System.out.println("O correspondente binário de " + i + " é " + binario);
 
         }
     }

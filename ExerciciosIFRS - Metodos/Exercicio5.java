@@ -16,6 +16,11 @@ public class Exercicio5 {
         System.out.println("Quantas casas decimais você quer ? ");
         numCasaDecimal = Integer.parseInt(System.console().readLine());
 
-        System.out.println();
+        numArredondado = numReal * Math.pow(10, numCasaDecimal);
+		numArredondado += 0.5; 
+		numArredondado = Math.floor(numArredondado);
+		numArredondado /= Math.pow(10, numCasaDecimal);
+
+        System.out.println(numArredondado);
     }
 }
